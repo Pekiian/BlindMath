@@ -1,0 +1,83 @@
+:root{
+    --main-font-color: #222222;
+    --main-blue-color: blue;    
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+*, body{
+    margin: 0;
+    padding: 0;
+}
+
+/** GLOBALES **/
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/** HEADER **/
+.site-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 2rem;
+}
+
+.site-header nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.site-header nav a{
+    color: var(--main-font-color);
+    text-decoration: none;
+}
+
+.btn-nav{
+    padding: .5em 1em;
+    border-radius: 20px;
+    background-color: var(--main-blue-color);
+    color: white!important;
+}
+
+.logotipo-blindmath{
+    height: 5%;
+    width: 5%;
+}
+
+/** HOME **/
+.home{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 60%;
+    margin: 0 auto;
+    min-height: 60vh;
+    place-content: center;
+}
+
+.title >*{
+    margin-bottom: .8rem;
+}
+
+.title h1{
+    color: var(--main-font-color);
+    font-size: 5rem;
+}
+
+.home-text{
+    font-size: 1.2rem;
+    color: gray;  
+}
+
+.slogan{
+    padding: .2em 1.8em;
+    background-color: var(--main-blue-color);
+    color: white;
+    text-align: center;
+    display: inline-block;
+}
