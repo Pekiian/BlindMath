@@ -1,6 +1,13 @@
 :root{
     --main-font-color: #222222;
-    --main-blue-color: blue;    
+    --second-font-color: #474747;
+    --main-blue-color: blue;  
+    --second-blue-color: #7387e2;  
+    --bg-grey-color: #f9f9f9;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 *, *::before, *::after{
@@ -10,12 +17,27 @@
 *, body{
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 /** GLOBALES **/
 .container{
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto;
+}
+
+h2{
+    font-size: 2.4rem;
+}
+
+h3{
+    color: var(--second-blue-color);
+    font-size: 1.9rem;
+}
+
+h4{
+    font-size: 1.6rem;
 }
 
 /** HEADER **/
@@ -24,60 +46,600 @@
     align-items: center;
     justify-content: space-between;
 
-    padding: 2rem;
+    padding: 2.2rem 3rem;
+    margin-bottom: 5rem;
 }
 
-.site-header nav {
+.trazado-header{
+    position: absolute;
+    top: -162px;
+    right: 70px;
+    width: 30%;
+    height: 125%;
+    z-index: -1;
+    transform: rotate(220deg);
+}
+
+.site-nav {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
 }
 
-.site-header nav a{
+.site-nav a{
     color: var(--main-font-color);
     text-decoration: none;
+    transition: all .1s ease-in;
+}
+
+.site-nav a:hover,
+.site-nav a:focus{
+    filter: brightness(85%);
+    transform: translateY(-10px);
 }
 
 .btn-nav{
-    padding: .5em 1em;
+    padding: .8em 1.1em;
     border-radius: 20px;
     background-color: var(--main-blue-color);
     color: white!important;
+    font-weight: 700;
+    background: rgb(52,128,221);
+    background: linear-gradient(180deg, rgba(52,128,221,1) 48%, rgba(95,55,235,1) 75%); 
+    transition: filter .1s ease-in;
+}
+
+.btn-nav:hover,
+.btn-nav:focus{
+    transform: none!important;
 }
 
 .logotipo-blindmath{
-    height: 5%;
-    width: 5%;
+    width: 10%; 
+    transition: all .5s ease-in-out;
+}
+
+.logotipo-blindmath:hover,
+.logotipo-blindmath:focus{
+    transform: scale(1.2) rotate(360deg);
+}
+
+@media (max-width: 768px){
+    .site-nav{
+        display: none!important;
+    }
+    .logotipo-blindmath{
+        width: 20%;
+    }
+}
+
+@media (max-width: 450px){
+    .site-header{
+        display: block;
+    }
+
+    .logotipo-blindmath{
+        width: 25%;
+    }
 }
 
 /** HOME **/
 .home{
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 60%;
-    margin: 0 auto;
-    min-height: 60vh;
+    grid-template-columns: 1fr .8fr;
     place-content: center;
+    place-items: center;
+    min-height: 60vh;
+    margin: 0 auto;
+    max-width: 90%;
 }
 
-.title >*{
+.title > *{
     margin-bottom: .8rem;
 }
 
 .title h1{
     color: var(--main-font-color);
-    font-size: 5rem;
+    font-size: clamp(2.4rem, 6.5vw, 6rem);
+    font-family: 'Raleway', sans-serif;
 }
 
 .home-text{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: gray;  
+    justify-self: flex-end;
 }
 
 .slogan{
-    padding: .2em 1.8em;
+    padding: .4vw 2vw;
+    font-size: clamp(1.5rem, 1.9rem, 5vw); 
     background-color: var(--main-blue-color);
     color: white;
     text-align: center;
     display: inline-block;
+    background: rgb(96, 57, 255);
+    -webkit-box-shadow: 7px 10px 9px -8px  rgb(19,85,173);
+    -moz-box-shadow: 7px 10px 9px -8px  rgb(19,85,173);
+    box-shadow: 7px 10px 9px -8px  rgb(19,85,173);
+    transition: all .3s ease-in-out;
+    cursor: none;
 }
+
+.slogan:hover{
+    -webkit-box-shadow: 7px 10px 9px -8px  rgb(49, 121, 215);
+    -moz-box-shadow: 7px 10px 9px -8px  rgb(49, 121, 215);
+    box-shadow: 9px 13px 14px -8px  rgb(49, 121, 215);
+
+    transform: translateX(24%);
+}
+
+.home img{
+    width: 165%;
+    justify-self: center;
+}
+
+@media (max-width: 768px){
+    .home{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 450px){
+    .home{
+        text-align: center;
+    }
+
+    .slogan:hover,
+    .slogan:focus{
+        transform: none;
+    }
+}
+
+/** NOSOTROS **/
+.nosotros{
+    background-color: var(--bg-grey-color);
+    min-height: 60vh;
+    text-align: center;
+    padding: 5rem 0 1rem 0;
+    margin: 13rem 0 4rem 0;
+}
+
+.nosotros h3{
+    margin: 1.6rem;
+    font-family: 'Varta', sans-serif;
+}
+
+.iconos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    place-content: center;
+    gap: 4rem;
+    max-width: 70%;
+    margin: 5rem auto;
+}
+
+.icono{
+    text-align: center;
+}
+
+@media (max-width: 768px){
+    .icono-3{
+        grid-column: 1 / 3;
+    }
+}
+
+.icono img{
+    border: 1px solid var(--bg-grey-color);
+    padding: .5rem;
+    width: 20%;
+    border-radius: 20px;
+    background-color: var(--second-blue-color);
+}
+
+.icono h4{
+    margin: .4rem 0;
+    font-family: 'Varta', sans-serif;
+}
+
+.icono p{
+    color: var(--second-font-color);
+    word-spacing: .03em;
+    font-size: 1.5rem;
+    font-family: 'Varta', sans-serif;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/** EQUIPO **/
+.equipo h2{
+    text-align: center;
+}
+
+.jugadores{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    place-content: center;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.jugador{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 3.5rem 0;
+    transition: transform .3s ease-in-out;
+}
+
+.jugador:hover{
+    transform: scale(1.1);
+}
+
+.jugador span{
+    display: block;
+    text-align: center;
+}
+
+.jugador p{
+    color: var(--second-font-color);
+    font-size: 1rem;
+    margin-top: .3rem;
+}
+
+.jugador h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: .2rem;
+    color: black;
+}
+
+.team-icon-box{
+    display: inline;
+    text-align: center;
+}
+
+.team-icon-box a:first-child{
+    margin-right: .3em;
+}
+
+.team-icon-box a{
+    text-decoration: none;
+}
+
+.team-icon-box a img{
+    width: 15%;
+}
+
+/** PREMIOS **/
+.titulo-premios{
+    background-color: var(--bg-grey-color);
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.titulo-premios h2{
+    position: relative;
+    display: inline;
+    font-size: clamp(1rem, 7vw, 2.4rem);
+    display: inline-block;
+    padding: 3rem;
+}
+
+.titulo-premios h2 img{
+    width: 12%;
+    position: absolute;
+	animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.8) rotate(0deg);
+	}
+
+	25% {
+		transform: scale(1) rotate(50deg);
+	}
+
+	50% {
+		transform: scale(0.8) rotate(0deg);
+	}
+
+    75% {
+        transform: scale(1) rotate(-50deg);
+    }
+
+    100% {
+        transform: scale(0.8) rotate(0deg);
+    }
+}
+
+.titulo-premios h2 img:first-of-type{
+    top: 0;
+    left: 0;
+}
+
+.titulo-premios h2 img:nth-child(2){
+    bottom: 15px;
+    right: 0;
+}
+
+.fondo-premios{
+    background-image: url('/img/premios/patron-del-mal.png');
+    min-height: 70vh;
+    margin: 2rem 0;
+}
+
+.premios{
+    max-width: 60%;
+    margin: 5rem auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    place-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    padding:1rem 0;
+}
+
+.card-premios{
+    background-color: white;
+    border-radius: 50px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+    width: 20vw;
+
+    padding: 1.5rem;  
+    margin: 0 auto; 
+    min-height: 100%; 
+
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+    z-index: 200;
+
+    transition: all .3s ease-in-out;
+}
+
+.card-premios:hover,
+.card-premios:focus{
+    transform: scale(1.1);
+}
+
+.card-3{
+    grid-column: 1 / 3;
+}
+
+.card-premios img{
+    width: 100%;
+    border-radius: 40px;
+    flex-grow: 0;
+}
+
+.card-premios h3{
+    color: var(--main-blue-color);
+    margin-top: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 850px){
+    .card-premios{
+        width: 40vw;
+    }
+
+    .card-3{
+        grid-column: 1/2;
+    }
+}
+
+@media (max-width: 600px){
+    .titulo-premios h2{
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 450px){
+    .card-premios h4{
+        font-size: 1rem;
+    }
+
+    .titulo-premios h2 img{
+        width: 22%;
+    }
+}
+
+/** CONTACTO **/
+.contacto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 60vh;
+    text-align: center;
+}
+
+.contacto img{
+    width: 20%;
+}
+
+.contacto p:first-of-type{
+    color: var(--second-font-color);
+    font-size: 1.7rem;
+    font-family: 'Varta', sans-serif;
+    max-width: 50%;
+    margin: 1rem auto;
+}
+
+.email{
+    background-color: rgb(0, 63, 125);
+    font-size: clamp(1.3rem, 4vw, 2rem);
+    border-radius: 20px;
+    padding: .2em .8em;
+    margin: 1rem 0 2rem 0;
+    color: white;
+    text-decoration: none;
+    transition: transform .2s ease-in;
+}
+
+.email:hover,
+.email:focus{
+    transform: scale(1.1);
+}
+
+@media (max-width: 800px){
+    /* .email{
+        font-size: 1.2rem;
+    } */
+
+    .contacto img{
+        width: 40%;
+    }
+
+    .contacto p{
+        font-size: 1.1rem;
+    }
+}
+
+/** EMPRESAS **/
+.titulo-empresas{
+    background-color: var(--bg-grey-color);
+    padding: 5rem;
+    text-align: center;
+}
+
+.empresas{
+    margin: 5rem auto 10rem auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.highlight{
+    display: inline-block;
+    margin: 2rem -0.4em;
+    padding: 0.1em 0.4em;
+    border-radius: 0.8em 0.3em;
+    background: transparent;
+    background-image: linear-gradient(
+      to right,
+      var(--second-blue-color) 1%,
+      var(--second-blue-color) 4%,
+      var(--second-blue-color) 3%
+    );
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+.grid-empresas{
+    margin: 4rem auto;
+    display: grid;
+    place-items: center;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4rem;
+    max-width: 70%;
+}
+
+.grid-empresas img{
+    width: 70%;
+}
+
+/** SUMANDO INCLUSIÓN **/
+.suma-inclusion{
+    display: grid;
+    grid-template-columns: 1fr .8fr;
+
+    background-color: rgb(0, 63, 125);
+    color: white;
+
+    padding-top: 4rem;
+
+    margin-bottom: 8rem;
+}
+
+.inclusion-texto{
+    align-self: center;
+    justify-self: flex-end;
+    max-width: 50%;
+    display: block;
+    line-height: 1.4;
+    word-spacing: .03em;
+    margin-bottom: 2rem;
+}
+
+.inclusion-texto h2{
+    font-size: clamp(1.6rem, 5vw, 2.6rem);
+    margin-bottom: 1rem;
+}
+
+.inclusion-texto p{
+    font-size: clamp(1rem, 1.4rem, .3rem);
+}
+
+.suma-inclusion img{
+    width: 100%;
+    justify-self: flex-start;
+    align-self: end;
+}
+
+@media (max-width: 768px){
+    .suma-inclusion{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .suma-inclusion img{
+        justify-self: center;
+    }
+}
+
+/** FOOTER **/
+.site-footer{
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+.social-icon-box a img{
+    width: 2vw;
+    margin-right: 1rem;
+} 
+
+.separator{
+    display: block;
+    height: 3px;
+    max-width: 100%;
+    text-align: center;
+    background-color: var(--bg-grey-color);
+    margin: 1.3rem 0;
+}
+
+.copyright{
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 1050px){
+    .social-icon-box a img{
+        width: 3vw;
+    }
+}
+
+@media (max-width: 768px){
+    .social-icon-box a img{
+        width: 6vw;
+    }
+}
+

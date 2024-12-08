@@ -4,30 +4,201 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlindMath</title>
+    <title>BlindMath - Calculadora Científica Argentina para Ciegos</title>
+    <meta name="title" content="BlindMath - Calculadora Científica para Ciegos">
+    <meta name="description" content="La primera Calculadora Científica argentina 100% inclusiva para personas ciegas o con discapacidad visual. Entrá para ver cómo operamos">
+    <meta name="robots" content="index, follow"> 
+    <meta name="author" content="Pedro Rodríguez Chiantore">
+    <meta name="publisher" content="BlindMath">
+    <link rel="canonical" href="https://www.blindmath.netlify.app">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Raleway:wght@800&family=Varta&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/img/Logo-BM@2x.png"></head>
 </head>
+
+<noscript>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Raleway:wght@800&family=Varta&display=swap"
+    rel="stylesheet"
+    type="text/css"
+/>
+</noscript>
 <body>
+    <img src="img/trazados/Trazado 5.png" alt="Trazado Header" class="trazado-header">
     <header class="site-header container">
         <img src="img/Logo-BM@2x.png" alt="Logotipo BlindMath" class="logotipo-blindmath">
         <nav class="site-nav">
-            <a href="">home</a>
-            <a href="">nosotros</a>
-            <a href="">equipo</a>
-            <a href="">premios</a>
-            <a href="" class="btn-nav">contacto</a>
+            <a id="producto-link" href="#producto">producto</a>
+            <a id="nosotros-link" href="#nosotros">nosotros</a>
+            <a id="equipo-link" href="#equipo">equipo</a>
+            <a id="premios-link" href="#premios">premios</a>
+            <a id="contacto-link" href="#contacto" class="btn-nav">contacto</a>
         </nav>
-    </header>
+    </header>   
 
-    <section class="home">
+    <section class="home" id="home">
         <div class="title">
             <h1>blindmath</h1>
-            <p class="home-text">la primer calculadora argentina 100% inclusiva y personalizable</p>
+            <p class="home-text">la primer calculadora argentina 100% inclusiva</p>
             <h2 class="slogan">sumando inclusión</h2>
         </div>
-        <div class="render-div">
-            <img src="" alt="Render">
+        <img src="img/render@2x.png" alt="Render">
+    </section>
+
+    <section class="nosotros" id="nosotros">
+        <h2>Porqué nosotros</h2>
+        <h3>razones que nos hacen únicos</h3>
+
+        <div class="iconos">
+            <div class="icono">
+                <img src="/img/iconos/lamp@2x.png" alt="Somos Primeros Icono">
+
+                <h4>innovamos con</h4>
+
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis eveniet accusantium eligendi maiores.<p>        
+            </div>
+
+            <div class="icono">
+                <img src="/img/iconos/1mero.png" alt="Somos Primeros Icono">
+
+                <h4>somos primeros</h4>
+
+                <p>Somos los primeros en desarrollar una calculadora científica 100% adaptada para discapacidad visual en Argentina.</p>    
+            </div>
+
+            <div class="icono">
+                <img src="/img/iconos/lapiz@2x.png" alt="Somos Primeros Icono">
+
+                <h4>100% adaptada</h4>
+
+                <p>Nuestro parlante y nuestra pantalla de alto contraste, permite adaptarla por completo a cualquier rango de discapacidad.</p>        
+            </div>
         </div>
-    </section> 
+    </section>
+    
+    <section class="equipo" id="equipo">
+        <h2>Nuestro Equipo</h2>
+
+        <div class="jugadores">
+            <div class="jugador">
+                <img src="/img/team/fidda.png" alt="Foto de David" style="width: 58%;">
+                <p>Redes y Relaciones</p>
+                <h3>David Fidda</h3>
+                <div class="team-icon-box">
+                    <a href="https://www.linkedin.com/in/david-fidda/" target="_blank">
+                        <img src="img/social-icons/linkedin@2x.png" alt="Logotipo de Linkedin">
+                    </a>
+                    <a href="https://www.instagram.com/david.fidda/" target="_blank">
+                        <img src="img/social-icons/instagram@2x.png" alt="Logotipo de Instagram">
+                    </a>
+                </div>
+            </div>
+
+            <div class="jugador">
+                <img src="/img/team/pedro.png" alt="Foto de Pedro" style="width: 58%;">
+                <p>Software y Fronted</p>
+                <h3>Pedro Rodríguez <span>Chiantore</span></h3>
+                <div class="team-icon-box">
+                    <a href="https://www.linkedin.com/in/pedro-rodriguez-chiantore/" target="_blank">
+                        <img src="img/social-icons/linkedin@2x.png" alt="Logotipo de Linkedin">
+                    </a>
+                    <a href="https://github.com/Pekiian/PEKIIAN" target="_blank">
+                        <img src="img/social-icons/github-1@2x.png" alt="Logotipo de Github">
+                    </a>
+                </div>
+            </div>
+
+            <div class="jugador">
+                <img src="/img/team/duer.png" alt="Foto de Tomás" style="width: 55%;">
+                <p>Hardware</p>
+                <h3>Tomás Duer</h3>
+                <div class="team-icon-box">
+                    <a href="https://www.linkedin.com/in/tomi-duer-483abb244/" target="_blank">
+                        <img src="img/social-icons/linkedin@2x.png" alt="Logotipo de Linkedin">
+                    </a>
+                    <a href="https://www.instagram.com/tomiduer/" target="_blank">
+                        <img src="img/social-icons/instagram@2x.png" alt="Logotipo de Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="titulo-premios" id="premios">
+        <h2>
+            Premios y Competencias
+            <img src="/img/premios/estrella-violeta@2x.png" alt="Estrella violeta decorativa">
+            <img src="/img/premios/estrella-azul@2x.png" alt="Estrella azul decorativa">
+        </h2>
+    </div>
+
+    <section class="fondo-premios">
+        <!-- <img src="./img/premios/patron_bermudez.png" class="lol" alt=""> -->
+        <div class="premios">
+            <div class="card-premios">
+                <img src="/img/premios/innovar.png" alt="Foto de Innovar">
+                <h3>finalistas 2022</h3>
+            </div>
+    
+            <div class="card-premios">
+                <img src="/img/premios/sudilovsky.png" alt="Foto de Sudilovsky-Busel">
+                <h3>finalistas 2022</h3>
+            </div>
+
+            <div class="card-premios card-3">
+                <img src="/img/premios/incubate.png" alt="Foto de Sudilovsky-Busel">
+                <h3>finalistas 2023</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+        <img src="/img/BLIND MATH ISO _ White.png" alt="Isologtipo de BlindMath">
+        <p>Ante cualquier consulta, no dudes en escribirnos a</p>
+        <a class="email" href="mailto: blindmath.ar@gmail.com">blindmath.ar@gmail.com</a>
+        <!-- <button class="copiar">Copiar Dirección</button> -->
+    </section>
+
+    <section class="suma-inclusion">
+        <div class="inclusion-texto">
+            <h2>Sumate a la inclusión!</h2>
+            <p>Seguinos en nuestras redes y acompañanos en este camino a lograr una educación más inclusiva. Sigamos haciendo la matemática accesible para todo el mundo</p>
+        </div>
+
+        <img src="/img/mano-mail.png" alt="Render de una mano enviando un email">
+    </section>
+    
+    <footer class="site-footer container">
+        <div class="social-icon-box">
+            <a href="https://www.linkedin.com/company/85669370/" target="_blank"><img src="img/social-icons/linkedin@2x.png" alt="Linkedin"></a>
+            <a href="https://www.instagram.com/blindmath.ar/" target="_blank"><img src="img/social-icons/instagram@2x.png" alt="Instagram"></a>
+            <a href="https://twitter.com/BlindMath_ar" target="_blank"><img src="img/social-icons/twitter-sign@2x.png" alt="Twitter"></a>
+        </div>
+        
+        <div class="separator"></div>
+
+        <p class="copyright">todos los derechos reservados 2023</p>
+    </footer>
+
+    <script defer>
+        // const mailCopiar = document.querySelector('.contacto p') 
+        // mailCopiar.select();
+        // copyText.setSelectionRange(0, 99999);
+
+        // navigator.clipboard.writeText(copyText.value);
+
+        const anajnuY = document.querySelector('#anajnu')
+        const nosotros = document.querySelector('#nosotros')
+        const links = document.querySelectorAll('a[id]')
+        const sections = document.querySelectorAll('section[id]')
+
+        for(let i = 0; i<links.length; i++){
+            links[i].addEventListener('click', () => {
+                nosotros.scrollIntoView(sections[i])
+            })
+        }
+    </script>
 </body>
 </html>
